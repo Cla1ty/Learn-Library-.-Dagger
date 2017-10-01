@@ -15,10 +15,10 @@ import dagger.android.support.AndroidSupportInjection;
 
 
 public class BlankFragment extends Fragment {
+    // Untuk fragment bukan di onCreate tp di onAttach
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onAttach(Context context) {
         AndroidSupportInjection.inject(this);
-        super.onCreate(savedInstanceState);
-
+        super.onAttach(context);
     }
 }

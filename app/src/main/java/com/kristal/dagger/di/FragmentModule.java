@@ -1,7 +1,7 @@
 package com.kristal.dagger.di;
 
-import com.kristal.dagger.ui.BlankFragment;
-import com.kristal.dagger.ui.BlankFragmentModule;
+import com.kristal.dagger.ui.fragment.BlankFragment;
+import com.kristal.dagger.ui.fragment.FragmentTestModule;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -12,6 +12,6 @@ import dagger.android.ContributesAndroidInjector;
 
 @Module
 public abstract class FragmentModule {
-    @ContributesAndroidInjector(modules = BlankFragmentModule.class)
+    @ContributesAndroidInjector(modules = FragmentTestModule.class)
     abstract BlankFragment bindBlankFragment();
 }
